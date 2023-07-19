@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_programmatic">
+    <content_block_programmatic action="DELETE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>Chas Test Jelly Content</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+
+	    <g2:evaluate>  
+        var openQuery = 'stateIN1,2,3,4,5',  
+            resolvedQuery = 'state=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            closedQuery = 'state=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            allQuery = 'stateIN1,2,3,4,5^NQstate=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)^NQstate=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            ga,  
+            categories = [],  
+            series = [];  
+
+        var periods = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+        var data = [];
+			
+        // Fill data with 0s  
+        for (i = 0; i != periods.length; i++) {  
+            data.push(0);  
+        }  
+
+        var ga = new GlideAggregate('x_58872_needit_plan_actuals');         
+        ga.addAggregate('SUM');  
+        ga.groupBy('period');
+        ga.groupBy('cost_center');   
+        ga.query();  
+        while (ga.next()) {              
+ 
+            data[i] = ga.getAggregate('SUM') * 1;            
+
+        }			
+
+
+    </g2:evaluate>  
+	
+  <table class="wide my-table">  
+    <caption class="my-tables">Amounts by Period Pivot (Jelly)</caption>  
+    <tr>  
+      <th></th>  
+      <j2:forEach items="$[periods]" var="jvar_period">  
+        <th class="my-table-h">$[jvar_period]</th>  
+      </j2:forEach>  
+    </tr>  
+	  
+    <j2:forEach items="$[data]" var="jvar_series">  
+      <tr class="my-row">  
+        <g2:evaluate jelly="true">  
+          var cc = jelly.jvar_series.cost_center;  
+          var curSeriesData = jelly.jvar_series;  
+        </g2:evaluate>  
+        <td class="my-table-td my-row-h">$[cc]</td>  
+        <j2:forEach items="$[curSeriesData]" var="jvar_val">  
+          <td class="my-table-td">$[jvar_val]</td>  
+        </j2:forEach>  
+      </tr>  
+    </j2:forEach>  	  
+	  
+  </table>  	
+	
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-05 19:48:22</sys_created_on>
+        <sys_id>b1fda02697f72110840bf2a3f153af37</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Chas Test Jelly Content</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>content_block_programmatic_b1fda02697f72110840bf2a3f153af37</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-05 20:00:42</sys_updated_on>
+        <two_phase>true</two_phase>
+    </content_block_programmatic>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>a18b60a1db5c651007072f17d496190c</instance_id>
+        <instance_name>dev147048</instance_name>
+        <name>content_block_programmatic_b1fda02697f72110840bf2a3f153af37</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="content_block_programmatic"&gt;&lt;content_block_programmatic action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;category&gt;general&lt;/category&gt;&lt;condition/&gt;&lt;conditional&gt;false&lt;/conditional&gt;&lt;frame/&gt;&lt;logged_on&gt;false&lt;/logged_on&gt;&lt;name&gt;Chas Test Jelly Content&lt;/name&gt;&lt;programmatic_content&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+
+	    &lt;g2:evaluate&gt;  
+        var openQuery = 'stateIN1,2,3,4,5',  
+            resolvedQuery = 'state=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            closedQuery = 'state=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            allQuery = 'stateIN1,2,3,4,5^NQstate=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)^NQstate=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            ga,  
+            categories = [],  
+            series = [];  
+
+        var periods = [1,2,3,4,5,6,7,8,9,10,11,12];
+
+        var data = [];
+			
+        // Fill data with 0s  
+        for (i = 0; i != periods.length; i++) {  
+            data.push(0);  
+        }  
+
+        var ga = new GlideAggregate('x_58872_needit_plan_actuals');         
+        ga.addAggregate('SUM');  
+        ga.groupBy('period');
+        ga.groupBy('cost_center');   
+        ga.query();  
+        while (ga.next()) {              
+ 
+            data[i] = ga.getAggregate('SUM') * 1;            
+
+        }			
+
+
+    &lt;/g2:evaluate&gt;  
+	
+  &lt;table class="wide my-table"&gt;  
+    &lt;caption class="my-tables"&gt;Amounts by Period Pivot (Jelly)&lt;/caption&gt;  
+    &lt;tr&gt;  
+      &lt;th&gt;&lt;/th&gt;  
+      &lt;j2:forEach items="$[periods]" var="jvar_period"&gt;  
+        &lt;th class="my-table-h"&gt;$[jvar_period]&lt;/th&gt;  
+      &lt;/j2:forEach&gt;  
+    &lt;/tr&gt;  
+	  
+    &lt;j2:forEach items="$[data]" var="jvar_series"&gt;  
+      &lt;tr class="my-row"&gt;  
+        &lt;g2:evaluate jelly="true"&gt;  
+          var cc = jelly.jvar_series.cost_center;  
+          var curSeriesData = jelly.jvar_series;  
+        &lt;/g2:evaluate&gt;  
+        &lt;td class="my-table-td my-row-h"&gt;$[cc]&lt;/td&gt;  
+        &lt;j2:forEach items="$[curSeriesData]" var="jvar_val"&gt;  
+          &lt;td class="my-table-td"&gt;$[jvar_val]&lt;/td&gt;  
+        &lt;/j2:forEach&gt;  
+      &lt;/tr&gt;  
+    &lt;/j2:forEach&gt;  	  
+	  
+  &lt;/table&gt;  	
+	
+&lt;/j:jelly&gt;]]&gt;&lt;/programmatic_content&gt;&lt;sys_class_name&gt;content_block_programmatic&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-07-05 19:48:22&lt;/sys_created_on&gt;&lt;sys_id&gt;b1fda02697f72110840bf2a3f153af37&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Chas Test Jelly Content&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;content_block_programmatic_b1fda02697f72110840bf2a3f153af37&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-07-05 20:00:42&lt;/sys_updated_on&gt;&lt;two_phase&gt;true&lt;/two_phase&gt;&lt;/content_block_programmatic&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-842147673</payload_hash>
+        <record_name>Chas Test Jelly Content</record_name>
+        <reverted_from/>
+        <source>f6f3b0e897732110840bf2a3f153afac</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-05 20:00:42</sys_created_on>
+        <sys_id>5a31b8e697f72110840bf2a3f153af73</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18927a48db50000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-05 20:00:42</sys_updated_on>
+        <type>Dynamic Content</type>
+        <update_guid>5231b8e641f721108d0c5025d3a31b73</update_guid>
+        <update_guid_history>5231b8e641f721108d0c5025d3a31b73:-842147673,1311fc2ac1f72110e9c659f2d29e6634:1492988730,4aa078e6a3f721103ca92bce79ba762c:883192468,364078a68ef72110abf4affacc33ecab:-1376537484,52af20a62cf72110c5fb1d14f7c7aaf0:-1927455471,22ee64a674f721102cb3672f23e612d9:741518835,128ea4a66ff72110cbaaf65fc8f84278:1619119305,6d6e64a60ef7211058cbf23b1f57edcf:-1330519596</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Chas Test Jelly Content">acd849fa97f76110840bf2a3f153af89</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-06 16:22:17</sys_created_on>
+        <sys_db_object display_value="" name="content_block_programmatic">content_block_programmatic</sys_db_object>
+        <sys_id>67a130851c3a41f8b3bd8649e22d5010</sys_id>
+        <sys_metadata>b1fda02697f72110840bf2a3f153af37</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Chas Test Jelly Content</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>content_block_programmatic_b1fda02697f72110840bf2a3f153af37</sys_update_name>
+        <sys_update_version display_value="content_block_programmatic_b1fda02697f72110840bf2a3f153af37">5a31b8e697f72110840bf2a3f153af73</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-06 16:22:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

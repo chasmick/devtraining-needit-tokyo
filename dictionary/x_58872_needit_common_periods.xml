@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="1a6434ac97732110840bf2a3f153affe" label="Common Periods" max_length="40" name="x_58872_needit_common_periods" type="collection">
+        <element default="0" label="Amount" max_length="32" name="amount" type="currency2"/>
+        <element default="0" label="Amount number" max_length="40" name="amount_number" type="integer"/>
+        <element default="0" label="Catch me" max_length="40" name="catch_me" type="integer"/>
+        <element label="Closed" max_length="40" name="closed" type="boolean"/>
+        <element label="Current" max_length="40" name="current" type="boolean"/>
+        <element display="true" label="Period" mandatory="true" max_length="40" name="period" type="integer"/>
+        <element choice="3" default="Open" label="Status" mandatory="true" max_length="40" name="status" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Closed" value="Closed"/>
+                <element inactive_on_update="false" label="Current" value="Current"/>
+                <element inactive_on_update="false" label="Open" value="Open"/>
+            </choice>
+        </element>
+        <element attributes="format=none" label="Year" mandatory="true" max_length="40" name="year" type="integer"/>
+        <index name="index">
+            <element name="amount"/>
+        </index>
+    </element>
+</database>

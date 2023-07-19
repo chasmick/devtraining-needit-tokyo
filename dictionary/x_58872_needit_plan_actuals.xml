@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9fc9f06097b32110840bf2a3f153afe6" label="Plan Actuals" max_length="40" name="x_58872_needit_plan_actuals" type="collection">
+        <element default="0" label="Amount" mandatory="true" max_length="32" name="amount" type="currency2"/>
+        <element label="Amount number" max_length="40" name="amount_number" type="integer"/>
+        <element default="0" label="Catch me" max_length="40" name="catch_me" type="integer"/>
+        <element display="true" label="Cost Center" mandatory="true" max_length="32" name="cost_center" reference="x_58872_needit_common_cost_centers" type="reference"/>
+        <element label="Description" mandatory="true" max_length="100" name="description" type="string"/>
+        <element label="Period" mandatory="true" max_length="32" name="period" reference="x_58872_needit_common_periods" type="reference"/>
+        <index name="index">
+            <element name="amount"/>
+        </index>
+        <index name="index2">
+            <element name="cost_center"/>
+        </index>
+        <index name="index3">
+            <element name="period"/>
+        </index>
+    </element>
+</database>

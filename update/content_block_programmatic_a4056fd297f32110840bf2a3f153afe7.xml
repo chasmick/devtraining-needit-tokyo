@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="content_block_programmatic">
+    <content_block_programmatic action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category>general</category>
+        <condition/>
+        <conditional>false</conditional>
+        <frame/>
+        <logged_on>false</logged_on>
+        <name>Chas Test Content Block</name>
+        <programmatic_content><![CDATA[<?xml version="1.0" encoding="utf-8" ?>  
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">  
+    <g:evaluate>  
+        var openQuery = 'stateIN1,2,3,4,5',  
+            resolvedQuery = 'state=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            closedQuery = 'state=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            allQuery = 'stateIN1,2,3,4,5^NQstate=6^resolved_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)^NQstate=7^closed_atONToday@javascript:gs.daysAgoStart(0)@javascript:gs.daysAgoEnd(0)',  
+            ga,  
+            categories = [],  
+            series = [];  
+
+
+        // Setup Categories  
+        var ga = new GlideAggregate('incident');  
+        ga.addEncodedQuery(allQuery);  
+        ga.addAggregate('COUNT');  
+        ga.groupBy('location');  
+        ga.orderBy('location');  
+        ga.query();  
+        while (ga.next()) {  
+            categories.push(ga.location.getDisplayValue() + '' || '(empty)');  
+        }  
+
+
+        // Reusable function for building the 3 Series  
+        function getSeries(name, index, query, categories) {  
+            var ga = new GlideAggregate('incident'),  
+                data = [],  
+                i,  
+                cat;  
+
+
+            // Fill data with 0's  
+            for (i = 0; i != categories.length; i++) {  
+                data.push(0);  
+            }  
+
+
+            ga.addEncodedQuery(query);  
+            ga.addAggregate('COUNT');  
+            ga.groupBy('location');  
+            ga.orderBy('location');  
+            ga.query();  
+            while (ga.next()) {  
+                // Find category index  
+                for (i = 0; i != categories.length; i++) {  
+                    cat = ga.location.getDisplayValue() + '' || '(empty)';  
+                    if (categories[i] == cat) {  
+                        break;  
+                    }  
+                }  
+
+
+                data[i] = ga.getAggregate('COUNT') * 1;  
+            }  
+
+
+            return { 'name': name, 'legendIndex': index, 'data': data };  
+        }  
+
+
+        // Add the 3 series to an array for output  
+        series.push(getSeries('Opened Currently', 0, openQuery, categories));  // Add Open Series  
+        series.push(getSeries('Resolved Today', 1, resolvedQuery, categories)); // Add Resolved Series  
+        series.push(getSeries('Closed Today', 1, closedQuery, categories)); // Add Closed Series  
+    </g:evaluate>  
+  <style>  
+        .my-table {  
+            color: #485563;  
+        }  
+
+
+  caption.my-tables {  
+            font-weight: bold;  
+            font-size: 2em;  
+            margin-bottom: .75em;  
+        }  
+
+
+        th.my-table-h {  
+            text-align: center;  
+            width: 10em;  
+            padding-bottom: 1em;  
+        }  
+
+
+        td.my-table-td {  
+            text-align: center;  
+            font-size: 1.25em;  
+            padding: .5em .5em;  
+        }  
+
+
+        td.my-table-td:hover {  
+            font-size: 1.75em;  
+        }  
+
+
+        td.my-row-h {  
+            font-weight: bold;  
+            text-align:right;  
+        }  
+
+
+        tr.my-row {  
+            border-radius: .5em;  
+        }  
+
+
+        tr.my-row:hover {  
+            background-color: #f3f3f3;  
+        }  
+  </style>  
+  <table class="wide my-table">  
+    <caption class="my-tables">Incident Status Update</caption>  
+    <tr>  
+      <th></th>  
+      <j2:forEach items="$[categories]" var="jvar_cat">  
+        <th class="my-table-h">$[jvar_cat]</th>  
+      </j2:forEach>  
+    </tr>  
+    <j2:forEach items="$[series]" var="jvar_series">  
+      <tr class="my-row">  
+        <g2:evaluate jelly="true">  
+          var curSeriesName = jelly.jvar_series.name;  
+          var curSeriesData = jelly.jvar_series.data;  
+        </g2:evaluate>  
+        <td class="my-table-td my-row-h">$[curSeriesName]</td>  
+        <j2:forEach items="$[curSeriesData]" var="jvar_val">  
+          <td class="my-table-td">$[jvar_val]</td>  
+        </j2:forEach>  
+      </tr>  
+    </j2:forEach>  
+  </table>  
+</j:jelly>]]></programmatic_content>
+        <sys_class_name>content_block_programmatic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-05 14:29:38</sys_created_on>
+        <sys_id>a4056fd297f32110840bf2a3f153afe7</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Chas Test Content Block</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>content_block_programmatic_a4056fd297f32110840bf2a3f153afe7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-05 15:44:43</sys_updated_on>
+        <two_phase>true</two_phase>
+    </content_block_programmatic>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="0c1d30e497b32110840bf2a3f153af30" label="Amounts by Period" max_length="40" name="x_58872_needit_amounts_by_period" type="collection">
+        <element default="0" label="Amount" mandatory="true" max_length="40" name="amount" type="integer"/>
+        <element label="Amount dollars" max_length="32" name="amount_dollars" type="currency2"/>
+        <element label="Cost center" max_length="32" name="cost_center" reference="x_58872_needit_common_cost_centers" type="reference"/>
+        <element display="true" label="Line item" max_length="32" name="line_item" reference="x_58872_needit_plan_line_items" type="reference"/>
+        <element label="Period" mandatory="true" max_length="32" name="period" reference="x_58872_needit_common_periods" type="reference"/>
+        <element label="Year" mandatory="true" max_length="40" name="year" type="integer"/>
+        <index name="index">
+            <element name="amount_dollars"/>
+        </index>
+        <index name="index2">
+            <element name="cost_center"/>
+        </index>
+        <index name="index3">
+            <element name="line_item"/>
+        </index>
+        <index name="index4">
+            <element name="period"/>
+        </index>
+    </element>
+</database>

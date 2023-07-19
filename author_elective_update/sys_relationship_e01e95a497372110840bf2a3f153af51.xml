@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_relationship">
+    <sys_relationship action="DELETE">
+        <advanced>false</advanced>
+        <apply_to/>
+        <basic_apply_to>x_58872_needit_common_periods</basic_apply_to>
+        <basic_query_from>x_58872_needit_plan_actuals</basic_query_from>
+        <insert_callback/>
+        <name>Actuals</name>
+        <query_from/>
+        <query_with><![CDATA[current.addQuery('period', parent.sys_id);]]></query_with>
+        <reference_field>period</reference_field>
+        <related_list/>
+        <simple_reference>true</simple_reference>
+        <sys_class_name>sys_relationship</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-29 18:13:10</sys_created_on>
+        <sys_id>e01e95a497372110840bf2a3f153af51</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Actuals</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_relationship_e01e95a497372110840bf2a3f153af51</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:13:10</sys_updated_on>
+    </sys_relationship>
+    <sys_translated_text action="DELETE" query="documentkey=e01e95a497372110840bf2a3f153af51"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>a18b60a1db5c651007072f17d496190c</instance_id>
+        <instance_name>dev147048</instance_name>
+        <name>sys_relationship_e01e95a497372110840bf2a3f153af51</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_relationship"&gt;&lt;sys_relationship action="INSERT_OR_UPDATE"&gt;&lt;advanced&gt;false&lt;/advanced&gt;&lt;apply_to/&gt;&lt;basic_apply_to&gt;x_58872_needit_common_periods&lt;/basic_apply_to&gt;&lt;basic_query_from&gt;x_58872_needit_plan_actuals&lt;/basic_query_from&gt;&lt;insert_callback/&gt;&lt;name&gt;Actuals&lt;/name&gt;&lt;query_from/&gt;&lt;query_with&gt;&lt;![CDATA[current.addQuery('period', parent.sys_id);]]&gt;&lt;/query_with&gt;&lt;reference_field&gt;period&lt;/reference_field&gt;&lt;related_list/&gt;&lt;simple_reference&gt;true&lt;/simple_reference&gt;&lt;sys_class_name&gt;sys_relationship&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2023-06-29 18:13:10&lt;/sys_created_on&gt;&lt;sys_id&gt;e01e95a497372110840bf2a3f153af51&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;Actuals&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_relationship_e01e95a497372110840bf2a3f153af51&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2023-06-29 18:13:10&lt;/sys_updated_on&gt;&lt;/sys_relationship&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=e01e95a497372110840bf2a3f153af51"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1872196395</payload_hash>
+        <record_name>Actuals</record_name>
+        <reverted_from/>
+        <source>f6f3b0e897732110840bf2a3f153afac</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-29 18:13:10</sys_created_on>
+        <sys_id>ac1fdd2097372110840bf2a3f153afbd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>189085bf1430000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:13:10</sys_updated_on>
+        <type>Relationship</type>
+        <update_guid>e41fdd20aa3721105e3cb56ae37c05bd</update_guid>
+        <update_guid_history>e41fdd20aa3721105e3cb56ae37c05bd:1872196395</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-06-29 18:43:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_relationship">sys_relationship</sys_db_object>
+        <sys_id>00d17e7bf4e044b09e023f9c0d46b440</sys_id>
+        <sys_metadata>e01e95a497372110840bf2a3f153af51</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Actuals</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="Common Periods">1a6434ac97732110840bf2a3f153affe</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_relationship_e01e95a497372110840bf2a3f153af51</sys_update_name>
+        <sys_update_version display_value="sys_relationship_e01e95a497372110840bf2a3f153af51">ac1fdd2097372110840bf2a3f153afbd</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-06-29 18:43:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
