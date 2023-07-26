@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>true</left_join>
+        <order>300</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 23:12:13</sys_created_on>
+        <sys_id>01d29b6097d43110840bf2a3f153af28</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>x_58872_needit_plan_actuals</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_db_view_table_01d29b6097d43110840bf2a3f153af28</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-24 23:42:22</sys_updated_on>
+        <table>x_58872_needit_plan_actuals</table>
+        <variable_prefix>actuals</variable_prefix>
+        <view display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</view>
+        <where_clause>actuals_period=cp_sys_id &amp;&amp;  cp_year &lt;= eav_option_value  &amp;&amp; cp_period &lt;= eav_option_value_2</where_clause>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>a18b60a1db5c651007072f17d496190c</instance_id>
+        <instance_name>dev147048</instance_name>
+        <name>sys_db_view_table_01d29b6097d43110840bf2a3f153af28</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>true</left_join><order>300</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-24 23:12:13</sys_created_on><sys_id>01d29b6097d43110840bf2a3f153af28</sys_id><sys_mod_count>8</sys_mod_count><sys_name>x_58872_needit_plan_actuals</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>sys_db_view_table_01d29b6097d43110840bf2a3f153af28</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-24 23:42:22</sys_updated_on><table>x_58872_needit_plan_actuals</table><variable_prefix>actuals</variable_prefix><view display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</view><where_clause>actuals_period=cp_sys_id &amp;&amp;  cp_year &lt;= eav_option_value  &amp;&amp; cp_period &lt;= eav_option_value_2</where_clause></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>844286160</payload_hash>
+        <record_name>x_58872_needit_plan_actuals</record_name>
+        <reverted_from/>
+        <source>4ebf989d9750b110840bf2a3f153af30</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-24 23:42:22</sys_created_on>
+        <sys_id>662a536897d43110840bf2a3f153af6b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>1898a484fcb0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 18:03:14</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>6e2a5368f3d43110cfd385f5bba0546a</update_guid>
+        <update_guid_history>6e2a5368f3d43110cfd385f5bba0546a:844286160,aa281fe495d43110e2bd3fd7991b1333:1383791674,5fb713a4f8d431108a7dcbee908f5ae3:1407361247,ff46df6433d43110f8d32f14f6623ac5:1383791674,1436df64b5d43110903361be9de4d79c:-1177232640,fbc55f2409d43110f876042029b8d38c:621355902,00b41b2418d43110a2a8c40ddc7e28ce:13279039,21c3d7e0f1d431106e77fb2b56b4c9cf:1193413998,c1439fa088d431105effc8ba1f9d2425:-811557572</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-25 23:34:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>02128da6e89c4ba08661f5e9513af100</sys_id>
+        <sys_metadata>01d29b6097d43110840bf2a3f153af28</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_58872_needit_plan_actuals</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_01d29b6097d43110840bf2a3f153af28</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_01d29b6097d43110840bf2a3f153af28">662a536897d43110840bf2a3f153af6b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-25 23:34:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

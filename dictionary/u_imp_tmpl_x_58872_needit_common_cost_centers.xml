@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="4e0a6d6097503110840bf2a3f153af9b" extends="sys_import_set_row" label="Imp Tmpl X 58872 Needit Common Cost Centers" max_length="40" name="u_imp_tmpl_x_58872_needit_common_cost_centers" type="collection">
+        <element attributes="import_attribute_name=Amount" label="Amount" max_length="32" name="u_amount" type="integer"/>
+        <element attributes="import_attribute_name=Amount Number" label="Amount Number" max_length="40" name="u_amount_number" type="integer"/>
+        <element attributes="import_attribute_name=Catch me" label="Catch me" max_length="40" name="u_catch_me" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cost Center" label="Cost Center" max_length="100" name="u_cost_center" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Path" label="Path" max_length="1000" name="u_path" type="string"/>
+    </element>
+</database>

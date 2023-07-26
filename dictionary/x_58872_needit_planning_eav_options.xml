@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="aee6f62897543110840bf2a3f153af8f" label="Planning  EAV Options" max_length="40" name="x_58872_needit_planning_eav_options" type="collection">
+        <element label="Option Name" mandatory="true" max_length="255" name="option_name" type="string"/>
+        <element label="Option Value" mandatory="true" max_length="255" name="option_value" type="string"/>
+        <element label="Option Value 2" max_length="255" name="option_value_2" type="string"/>
+        <element label="Option Value 3" max_length="40" name="option_value_3" type="integer"/>
+        <element label="Test" max_length="4000" name="test" type="simple_name_values"/>
+    </element>
+</database>

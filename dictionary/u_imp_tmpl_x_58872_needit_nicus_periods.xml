@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="086cf6b497d03110840bf2a3f153af19" extends="sys_import_set_row" label="Imp Tmpl X 58872 Needit Nicus Periods" max_length="40" name="u_imp_tmpl_x_58872_needit_nicus_periods" type="collection">
+        <element attributes="import_attribute_name=Fiscal Period" label="Fiscal Period" max_length="40" name="u_fiscal_period" type="integer"/>
+        <element attributes="import_attribute_name=Fiscal Year" label="Fiscal Year" max_length="40" name="u_fiscal_year" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Period Display" label="Period Display" max_length="50" name="u_period_display" type="string"/>
+    </element>
+</database>

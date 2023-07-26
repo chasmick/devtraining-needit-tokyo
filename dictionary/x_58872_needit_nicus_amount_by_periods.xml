@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="8db0cb7897d03110840bf2a3f153afa7" label="Nicus Amount by Periods" max_length="40" name="x_58872_needit_nicus_amount_by_periods" type="collection">
+        <element label="Amount" mandatory="true" max_length="32" name="amount" type="currency2"/>
+        <element label="Cost Center" mandatory="true" max_length="32" name="cost_center" reference="x_58872_needit_nicus_cost_centers" type="reference"/>
+        <element label="Line Item Desc" mandatory="true" max_length="255" name="line_item_desc" type="string"/>
+        <element label="Period" mandatory="true" max_length="32" name="period" reference="x_58872_needit_nicus_periods" type="reference"/>
+        <index name="index">
+            <element name="period"/>
+            <element name="cost_center"/>
+        </index>
+    </element>
+</database>

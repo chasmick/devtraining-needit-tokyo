@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="612d777497d43110840bf2a3f153af6e" label="Nicus Plan Actuals" max_length="40" name="x_58872_needit_nicus_plan_actuals" type="collection">
+        <element display="true" label="Actual Description" mandatory="true" max_length="255" name="actual_description" type="string"/>
+        <element label="Amount" mandatory="true" max_length="32" name="amount" type="currency2"/>
+        <element label="Cost Center" mandatory="true" max_length="32" name="cost_center" reference="x_58872_needit_nicus_cost_centers" type="reference"/>
+        <element label="Period" mandatory="true" max_length="32" name="period" reference="x_58872_needit_nicus_periods" type="reference"/>
+        <index name="index">
+            <element name="amount"/>
+        </index>
+        <index name="index2">
+            <element name="cost_center"/>
+        </index>
+        <index name="index3">
+            <element name="period"/>
+        </index>
+    </element>
+</database>

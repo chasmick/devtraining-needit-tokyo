@@ -7,17 +7,17 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2023-07-06 12:29:17</sys_created_on>
         <sys_id>a2d2187697376110840bf2a3f153af7c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>x_58872_needit_plan_actuals</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_db_view_table_a2d2187697376110840bf2a3f153af7c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2023-07-06 14:13:31</sys_updated_on>
+        <sys_updated_on>2023-07-23 18:42:37</sys_updated_on>
         <table>x_58872_needit_plan_actuals</table>
         <variable_prefix>paoutlook</variable_prefix>
         <view display_value="x_58872_needit_amount_by_period_view_v2">385c0de2977b2110840bf2a3f153af93</view>
-        <where_clause>paoutlook_cost_center=cc_sys_id &amp;&amp; paoutlook_period=cp_sys_id &amp;&amp; cp_closed=1</where_clause>
+        <where_clause>paoutlook_cost_center=cc_sys_id &amp;&amp; paoutlook_period=cp_sys_id &amp;&amp; ( opts_current_planning_perid_year &lt; cp_year &amp;&amp;  opts_current_planning_period_period &lt; cp_period )</where_clause>
     </sys_db_view_table>
 </record_update>

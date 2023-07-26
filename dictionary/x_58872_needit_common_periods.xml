@@ -4,8 +4,10 @@
         <element default="0" label="Amount number" max_length="40" name="amount_number" type="integer"/>
         <element default="0" label="Catch me" max_length="40" name="catch_me" type="integer"/>
         <element label="Closed" max_length="40" name="closed" type="boolean"/>
+        <element default="0" label="Cross join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
         <element label="Current" max_length="40" name="current" type="boolean"/>
-        <element display="true" label="Period" mandatory="true" max_length="40" name="period" type="integer"/>
+        <element label="Period" mandatory="true" max_length="40" name="period" type="integer"/>
+        <element display="true" label="Period Display" max_length="40" name="period_display" type="string"/>
         <element choice="3" default="Open" label="Status" mandatory="true" max_length="40" name="status" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Closed" value="Closed"/>

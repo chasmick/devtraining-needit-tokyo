@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="59332ccd97507110840bf2a3f153afbd" label="Nicus Current Planning Period" max_length="40" name="x_58872_needit_nicus_current_planning_period" type="collection">
+        <element default="0" label="Cross Join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
+        <element display="true" label="Current Planning Period" mandatory="true" max_length="32" name="current_planning_period" reference="x_58872_needit_nicus_periods" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.current_planning_period.fiscal_period;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Period" max_length="40" name="period" read_only="true" type="integer" virtual="true"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.current_planning_period.fiscal_year;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Year" max_length="40" name="year" read_only="true" type="integer" virtual="true"/>
+        <index name="index">
+            <element name="current_planning_period"/>
+        </index>
+    </element>
+</database>

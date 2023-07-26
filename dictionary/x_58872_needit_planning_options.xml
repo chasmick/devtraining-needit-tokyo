@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e538d7af97043110840bf2a3f153afb9" label="Planning Options" max_length="40" name="x_58872_needit_planning_options" type="collection">
+        <element label="Cost Center List Test One" max_length="4000" name="cost_center_list_test_one" reference="x_58872_needit_common_cost_centers" type="glide_list" use_dependent_field="true"/>
+        <element default="0" label="Cross join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;//return '';  // return the calculated value&#13;&#10;&#9;return current.current_planning_period.year;&#13;&#10;&#13;&#10;})(current);" label="Current Planning Perid Year" max_length="40" name="current_planning_perid_year" read_only="true" type="integer" virtual="true"/>
+        <element label="Current Planning Period" max_length="32" name="current_planning_period" reference="x_58872_needit_common_periods" type="reference"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.current_planning_period.period;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" display="true" label="Current Planning Period Period" mandatory="true" max_length="40" name="current_planning_period_period" read_only="true" type="integer" virtual="true"/>
+        <element label="Forecast years" max_length="40" name="forecast_years" type="integer"/>
+        <element dependent="planning_period_table" dependent_on_field="planning_period_table" label="Planning period" max_length="32" name="planning_period" type="document_id" use_dependent_field="true"/>
+        <element default="x_58872_needit_common_periods" label="Planning Period Table" max_length="80" name="planning_period_table" read_only="true" type="table_name"/>
+        <index name="index">
+            <element name="current_planning_period"/>
+        </index>
+        <index name="index2">
+            <element name="planning_period"/>
+        </index>
+    </element>
+</database>

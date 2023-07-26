@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="79570f3097143110840bf2a3f153aff0" label="Nicus Cost Centers" max_length="40" name="x_58872_needit_nicus_cost_centers" type="collection">
+        <element default="USD;0" label="Amount" mandatory="true" max_length="32" name="amount" read_only="true" type="currency2"/>
+        <element display="true" label="Cost Center" mandatory="true" max_length="255" name="cost_center" type="string"/>
+        <element default="0" label="Cross Join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
+        <element label="Path" max_length="1000" name="path" type="string"/>
+        <index name="index">
+            <element name="amount"/>
+        </index>
+    </element>
+</database>

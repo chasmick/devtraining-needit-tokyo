@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="e26f0a2497903110840bf2a3f153af82" label="Nicus Periods" max_length="40" name="x_58872_needit_nicus_periods" type="collection">
+        <element default="USD;0" label="Amount" mandatory="true" max_length="32" name="amount" read_only="true" type="currency2"/>
+        <element default="0" label="Cross Join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
+        <element label="Fiscal Period" mandatory="true" max_length="40" name="fiscal_period" type="integer"/>
+        <element label="Fiscal Year" mandatory="true" max_length="40" name="fiscal_year" type="integer"/>
+        <element display="true" label="Period Display" mandatory="true" max_length="50" name="period_display" type="string"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.fiscal_year + '-' + current.fiscal_period;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Period Display Abbr" mandatory="true" max_length="7" name="period_display_abbr" read_only="true" type="string" virtual="true"/>
+        <index name="index">
+            <element name="amount"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="20fb4f7497143110840bf2a3f153af37" extends="sys_import_set_row" label="Imp Tmpl X 58872 Needit Nicus Amount By Periods" max_length="40" name="u_imp_tmpl_x_58872_needit_nicus_amount_by_periods" type="collection">
+        <element attributes="import_attribute_name=Amount" label="Amount" max_length="32" name="u_amount" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Cost Center" label="Cost Center" max_length="32" name="u_cost_center" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Line Item Desc" label="Line Item Desc" max_length="255" name="u_line_item_desc" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Period" label="Period" max_length="40" name="u_period" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Period Display" label="Period Display" max_length="40" name="u_period_display" type="string"/>
+    </element>
+</database>

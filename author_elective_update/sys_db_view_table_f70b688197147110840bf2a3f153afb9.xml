@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table">
+    <sys_db_view_table action="DELETE">
+        <active>true</active>
+        <left_join>true</left_join>
+        <order>400</order>
+        <sys_class_name>sys_db_view_table</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 00:17:00</sys_created_on>
+        <sys_id>f70b688197147110840bf2a3f153afb9</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_db_view_table_f70b688197147110840bf2a3f153afb9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 15:43:38</sys_updated_on>
+        <table>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</table>
+        <variable_prefix>forecast</variable_prefix>
+        <view display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</view>
+        <where_clause>forecast_u_cost_center = costcenters_sys_id &amp;&amp; forecast_u_period = commonperiods_sys_id &amp;&amp; (commonperiods_fiscal_year &gt;= currentplanperiod_year &amp;&amp; commonperiods_fiscal_period &gt;= currentplanperiod_period)</where_clause>
+    </sys_db_view_table>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>a18b60a1db5c651007072f17d496190c</instance_id>
+        <instance_name>dev147048</instance_name>
+        <name>sys_db_view_table_f70b688197147110840bf2a3f153afb9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_view_table"><sys_db_view_table action="INSERT_OR_UPDATE"><active>true</active><left_join>true</left_join><order>400</order><sys_class_name>sys_db_view_table</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2023-07-26 00:17:00</sys_created_on><sys_id>f70b688197147110840bf2a3f153afb9</sys_id><sys_mod_count>10</sys_mod_count><sys_name>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</sys_name><sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package><sys_policy/><sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope><sys_update_name>sys_db_view_table_f70b688197147110840bf2a3f153afb9</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2023-07-26 15:43:38</sys_updated_on><table>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</table><variable_prefix>forecast</variable_prefix><view display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</view><where_clause>forecast_u_cost_center = costcenters_sys_id &amp;&amp; forecast_u_period = commonperiods_sys_id &amp;&amp; (commonperiods_fiscal_year &gt;= currentplanperiod_year &amp;&amp; commonperiods_fiscal_period &gt;= currentplanperiod_period)</where_clause></sys_db_view_table></record_update>]]></payload>
+        <payload_hash>-745347192</payload_hash>
+        <record_name>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</record_name>
+        <reverted_from/>
+        <source>4ebf989d9750b110840bf2a3f153af30</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 15:43:38</sys_created_on>
+        <sys_id>d9cfbf419710b110840bf2a3f153af6b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_recorded_at>18992debd050000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 18:03:13</sys_updated_on>
+        <type>View Table</type>
+        <update_guid>15cfbf415310b1104bb50fc32394ff6b</update_guid>
+        <update_guid_history>15cfbf415310b1104bb50fc32394ff6b:-745347192,8482f0491714711010d212635d699cf1:1124203052,62013009de1471108fe3d6015fd4bb55:-745347192,1ee078090414711059929d88b7dc8f77:-226936853,61cee845611471107dd54a7d80a6d10f:-745347192,f29de04584147110adaf0a3c3dd73fce:994392498,215dec05e414711021109051f26f5a31:1443896934,1c4d6c05dd147110bab7ddd317662883:-1006116944,500d6805af1471107b3f8c88e29ff44b:639530937,bdcb24c18d14711051b7643e3d072752:-371867069,afab24816f14711023bd256094a9bad7:207484655</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2023-07-26 15:45:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_db_view_table">sys_db_view_table</sys_db_object>
+        <sys_id>27bd7002df7e4a0c873084a04074c4c4</sys_id>
+        <sys_metadata>f70b688197147110840bf2a3f153afb9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>u_imp_tmpl_x_58872_needit_nicus_amount_by_periods</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent display_value="x_58872_needit_planning_forecast_view">7adf188897d47110840bf2a3f153afe3</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_db_view_table_f70b688197147110840bf2a3f153afb9</sys_update_name>
+        <sys_update_version display_value="sys_db_view_table_f70b688197147110840bf2a3f153afb9">d9cfbf419710b110840bf2a3f153af6b</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2023-07-26 15:45:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

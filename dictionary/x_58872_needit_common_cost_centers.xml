@@ -3,7 +3,8 @@
         <element default="0" label="Amount" max_length="32" name="amount" type="currency2"/>
         <element default="0" label="Amount number" max_length="40" name="amount_number" type="integer"/>
         <element default="0" label="Catch me" max_length="40" name="catch_me" type="integer"/>
-        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element label="Cross join" mandatory="true" max_length="40" name="cross_join" read_only="true" type="integer"/>
+        <element display="true" label="Cost Center" mandatory="true" max_length="100" name="name" type="string"/>
         <element label="Path" max_length="1000" name="path" type="string"/>
         <index name="index">
             <element name="amount"/>
